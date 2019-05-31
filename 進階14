@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+int main(void){
+	
+	int ha;
+	int oh;
+	char abc[]="I $am 5a$ go68od#@$ st-ude[nt].";
+	char *www;
+	
+	ha=strlen(abc);
+	www=abc;
+	for(oh=0;oh<ha;oh++){
+		if(*(www+oh)<122&&*(www+oh)>=96){
+			printf("%c", *(www+oh));
+		}
+		else if(*(www+oh)<91&&*(www+oh)>64){
+			printf("%c", *(www+oh));
+		}
+		else if(*(www+oh)==32){
+			printf("%c", *(www+oh));
+		}
+	}
+	printf("\n\n");
+	system("pause");
+	return 0;
+} 
